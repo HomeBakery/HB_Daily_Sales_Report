@@ -25,26 +25,29 @@ body, html {
     align-items: center;
     justify-content: center;
     padding: 10px 15px;
-    background-color: #1a237e;
+    background-color: #000000; /* Black background */
     color: white;
     gap: 15px;
     position: relative;
 }
 
-/* HB LOGO (CSS created) */
+/* LOGO IMAGE */
 .hb-logo {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #ffd700, #ff6b4a);
     border-radius: 50%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: #1a237e;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: none;
+}
+
+.hb-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Header title font */
@@ -54,7 +57,7 @@ body, html {
     margin: 0;
     font-weight: 700;
     text-align: left;
-    color: #ffd700;
+    color: #ffffff; /* White title text */
     letter-spacing: 1px;
 }
 
@@ -66,7 +69,7 @@ body, html {
     left: 25%;
     width: 50%;
     height: 3px;
-    background: linear-gradient(90deg, #ff6b4a, #1a237e);
+    background: linear-gradient(90deg, #ffffff, #555555); /* White to gray */
     border-radius: 3px;
 }
 
@@ -213,7 +216,7 @@ footer::before {
 /* RESPONSIVE HEADER */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* stack logo above title on small screens */
+        flex-direction: column;
         gap: 10px;
     }
     .header h1 {
@@ -226,7 +229,9 @@ footer::before {
 
 <!-- HEADER -->
 <div class="header">
-    <div class="hb-logo">HB</div>
+    <div class="hb-logo">
+        <img src="https://raw.githubusercontent.com/HomeBakery/HB_Logo/main/HB.jpg" alt="Home Bakery Logo">
+    </div>
     <h1>HOME BAKERY</h1>
 </div>
 
@@ -250,5 +255,3 @@ footer::before {
 
 </body>
 </html>
-
-
