@@ -50,7 +50,7 @@ body, html {
     object-fit: cover;
 }
 
-/* Header title font */
+/* Header title frame */
 .header h1 {
     font-family: 'Libre Baskerville', serif !important;
     font-size: 2.2em;
@@ -58,10 +58,15 @@ body, html {
     font-weight: 700;
     text-align: left;
     color: #000000; /* BLACK title text */
+    background: #ffffff; /* white frame */
+    padding: 5px 15px;
+    border: 2px solid #000000; /* black border for frame */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     letter-spacing: 1px;
 }
 
-/* Gradient underline */
+/* Gradient underline for header */
 .header::after {
     content: '';
     position: absolute;
@@ -69,7 +74,7 @@ body, html {
     left: 25%;
     width: 50%;
     height: 3px;
-    background: linear-gradient(90deg, #000000, #555555); /* black → gray */
+    background: linear-gradient(90deg, #000000, #555555);
     border-radius: 3px;
 }
 
